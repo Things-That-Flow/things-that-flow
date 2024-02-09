@@ -22,7 +22,9 @@
   },
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
-    "batch-update": "pnpm install && pnpm --filter @ttf/client install && pnpm --filter ttf-tsconfig install",
+    "install-all": "pnpm install && pnpm --filter @ttf/client install && pnpm --filter ttf-tsconfig install",
+    "uninstall-all": "find . -name 'node_modules' -exec rm -rf '{}' + ",
+    "batch-update": "pnpm uninstall-all && pnpm install-all",
     "client": "pnpm --filter @ttf/client",
     "tsconfig": "pnpm --filter ttf-tsconfig"
   },
