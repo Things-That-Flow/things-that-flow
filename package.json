@@ -27,6 +27,8 @@
   ],
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
+    "prepare": "husky install",
+    "lint": "pnpx eslint .",
     "install-all": "pnpm install && pnpm --filter @ttf/client install && pnpm --filter ttf-tsconfig install",
     "uninstall-all": "find . -name 'node_modules' -exec rm -rf '{}' + ",
     "batch-update": "pnpm uninstall-all && pnpm install-all",
@@ -36,15 +38,22 @@
   },
   "packageManager": "pnpm@8.15.1",
   "devDependencies": {
-    "pnpm": "^8.15.1",
-    "ttf-tsconfig": "^1.0.0",
     "@types/node": "^20.11.16",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.0.10",
+    "pnpm": "^8.15.1",
     "prettier": "^3.2.5",
+    "ttf-tsconfig": "^1.0.0",
     "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
