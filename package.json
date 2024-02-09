@@ -22,6 +22,7 @@
   },
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
+    "batch-install": "pnpm install && pnpm --filter @ttf/client install && pnpm --filter @ttf/tsconfig install",
     "client": "pnpm --filter @ttf/client",
     "tsconfig": "pnpm --filter @ttf/tsconfig"
   },
