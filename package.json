@@ -31,7 +31,8 @@
     "uninstall-all": "find . -name 'node_modules' -exec rm -rf '{}' + ",
     "batch-update": "pnpm uninstall-all && pnpm install-all",
     "client": "pnpm --filter @ttf/client",
-    "tsconfig": "pnpm --filter ttf-tsconfig"
+    "tsconfig": "pnpm --filter ttf-tsconfig",
+    "dev:client": "pnpm batch-update && pnpm client run dev"
   },
   "packageManager": "pnpm@8.15.1",
   "devDependencies": {
