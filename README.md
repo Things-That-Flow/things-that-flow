@@ -1,8 +1,10 @@
 # things that flow
 
-We are committed to enhancing user experience by embodying the essence of fluidity in every interaction. Our goal is to ensure that each action initiated by the user's fingertips flows smoothly and uninterruptedly, creating an intuitive and seamless journey. Rooted in minimalism, our approach simplifies the interface to remove unnecessary distractions, focusing on essential functions to facilitate elegant and efficient motions. Through meticulous design and refined expressions, we aim to deliver an elegant user experience characterized by its simplicity and effectiveness.
+We're focused on maximizing the user experience by embracing fluidity as a core principle in every interaction. Believing that each moment a user interacts with our product should be intuitive and smooth, we pursue a minimalist design that eliminates distractions and focuses on key functionalities. Our goal is to achieve both elegance and efficiency in use.
 
-Our commitment transcends mere aesthetic appeal. We strive for technical excellence, ensuring that our approach is holistic and inclusive of every phase in the development process, from testing and deployment to operations. Our ambition is to weave aesthetic and functional elegance seamlessly throughout every aspect of our work.
+Technical excellence is at the heart of our values. Throughout the development process, from testing to deployment and operations, we adopt a comprehensive approach to ensure a harmonious blend of aesthetic appeal and functional utility.
+
+Additionally, we recognize the importance of creative graphic design and commit to creating a stable and user-friendly coding environment that facilitates this. Our aim goes beyond merely enhancing UX; we strive to provide a foundation for creative expression and to make the development process easier and more efficient.
 
 ## Feature
 
