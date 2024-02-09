@@ -1,0 +1,8 @@
+{
+  "eslint.workingDirectories": [{ "pattern": "apps/*/" }, { "pattern": "packages/*/" }],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
