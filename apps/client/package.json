@@ -15,7 +15,7 @@
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
-    "@ttf/tsconfig": "^1.0.0",
+    "ttf-tsconfig": "^1.0.0",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react-swc": "^3.5.0",

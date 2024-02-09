@@ -22,14 +22,14 @@
   },
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
-    "batch-install": "pnpm install && pnpm --filter @ttf/client install && pnpm --filter @ttf/tsconfig install",
+    "batch-update": "pnpm install && pnpm --filter @ttf/client install && pnpm --filter ttf-tsconfig install",
     "client": "pnpm --filter @ttf/client",
-    "tsconfig": "pnpm --filter @ttf/tsconfig"
+    "tsconfig": "pnpm --filter ttf-tsconfig"
   },
   "packageManager": "pnpm@8.15.1",
   "devDependencies": {
     "pnpm": "^8.15.1",
-    "@ttf/tsconfig": "^1.0.0",
+    "ttf-tsconfig": "^1.0.0",
     "@types/node": "^20.11.16",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",

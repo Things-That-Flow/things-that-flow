@@ -1,3 +1,3 @@
 {
-  "extends": "@ttf/tsconfig/base.json"
+  "extends": "ttf-tsconfig/base.json"
 }
