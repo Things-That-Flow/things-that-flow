@@ -1,0 +1,37 @@
+{
+  "name": "things-that-flow",
+  "description": "obsessed with smooth motions and minimalism",
+  "author": "yongwoo <wooleejaan@gmail.com>",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "bugs": "https://github.com/Things-That-Flow/things-that-flow/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Things-That-Flow/things-that-flow"
+  },
+  "type": "module",
+  "keywords": [
+    "monorepo",
+    "pnpm",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20.10.0",
+    "pnpm": ">=8.15.1"
+  },
+  "scripts": {
+    "preinstall": "pnpm dlx only-allow pnpm",
+    "client": "pnpm --filter @ttf/client",
+    "tsconfig": "pnpm --filter @ttf/tsconfig"
+  },
+  "packageManager": "pnpm@8.15.1",
+  "devDependencies": {
+    "@ttf/tsconfig": "^1.0.0",
+    "@types/node": "^20.11.16",
+    "eslint": "^8.56.0",
+    "pnpm": "^8.15.1",
+    "prettier": "^3.2.5",
+    "typescript": "^5.2.2"
+  }
+}
