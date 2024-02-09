@@ -1,0 +1,11 @@
+---
+name: Bug 이슈
+about: Bug 이슈를 입력해 주세요
+title: ':trollface: 제목'
+labels: ''
+assignees: ''
+---
+
+### Description
+
+설명을 입력해 주세요
