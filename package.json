@@ -27,10 +27,14 @@
   },
   "packageManager": "pnpm@8.15.1",
   "devDependencies": {
+    "pnpm": "^8.15.1",
     "@ttf/tsconfig": "^1.0.0",
     "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
-    "pnpm": "^8.15.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2"
   }
