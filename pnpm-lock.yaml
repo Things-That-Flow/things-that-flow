@@ -35,7 +35,7 @@ importers:
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
-      ttf-tsconfig:
+      ttflow-tsconfig:
         specifier: ^1.0.0
         version: link:packages/tsconfig
       typescript:
@@ -63,7 +63,7 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.5.0
         version: 3.6.0(vite@5.1.0)
-      ttf-tsconfig:
+      ttflow-tsconfig:
         specifier: ^1.0.0
         version: link:../../packages/tsconfig
       vite:
