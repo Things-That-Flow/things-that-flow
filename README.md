@@ -18,5 +18,6 @@ Install VSCode Extension
 
 ```bash
 git clone https://github.com/Things-That-Flow/things-that-flow.git
-pnpm run dev:client
+pnpm install
+pnpm run dev:client # OR only `pnpm run dev:client:afterupdate`
 ```
