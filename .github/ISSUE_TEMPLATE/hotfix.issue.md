@@ -1,11 +1,11 @@
 ---
-name: Hotfix 이슈
-about: Hotfix 이슈를 입력해 주세요
-title: ':helicopter: 제목'
+name: Hotfix issue
+about: Please enter the hotfix issue
+title: '🐔 title'
 labels: ''
 assignees: ''
 ---
 
 ### Description
 
-설명을 입력해 주세요
+please provide a description

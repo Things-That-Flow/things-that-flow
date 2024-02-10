@@ -1,34 +1,34 @@
 <!-- PULL REQUEST TEMPLATE -->
-<!-- (체크박스 "[ ]"를 "[x]"로 작성하여, 체크해주세요) -->
+<!-- please mark the checkbox by changing "[ ]" to "[x]". -->
 
-## 해당 사항 (중복 선택)
+## Applicable items (select all that apply)
 
-<!-- 해당되는 사항만 남기고 나머지 줄을 삭제해주세요 -->
+<!-- please delete the remaining lines except for those that apply -->
 
-- [ ] FEAT : 새로운 기능 추가 및 개선
-- [ ] FIX : 버그 수정
-- [ ] REFACTOR : 결과의 변경 없이 코드의 구조를 재조정
-- [ ] STYLE : 코드 스타일에 관련된 변경 사항
-- [ ] DOCS : 코드가 아닌 문서를 수정한 경우
-- [ ] REMOVE : 파일을 삭제하는 작업만 수행
-- [ ] RENAME : 파일 또는 폴더명을 수정하거나 위치(경로)를 변경
-- [ ] CHORE : 패키지 매니저 설정, 코드 수정 없이 설정 변경(eslint) 등 기타 사항
+- [ ] FEAT : Adding new features and improvements
+- [ ] FIX : Bug fixes
+- [ ] REFACTOR : Restructuring code without altering outcomes
+- [ ] STYLE : Changes related to code style
+- [ ] DOCS : If modifications were made to documents rather than code
+- [ ] REMOVE : Performing deletion of files only
+- [ ] RENAME : Modifying file or folder names or relocating them (changing paths)
+- [ ] CHORE : Package manager configuration, miscellaneous changes such as adjusting settings (e.g., eslint) without modifying code
 
-## 설명
+## Description
 
-### 이슈 번호
+### Issue number
 
-<!-- 키워드를 사용해 이슈를 연결해주세요 -->
-<!-- 예시: close #1 / closes #1, #3 / resolve #4 -->
+<!-- Connect the issue using keywords -->
+<!-- Example: close #1 / closes #1, #3 / resolve #4 -->
 
 ### Key Changes
 
-- 어떤 작업을 했는지
+- what actions were taken
 
 ### How it Works
 
-- 간단한 로직 설명
+- explanation of the basic logic
 
 ### To Reviewers
 
-- 애매하거나 같이 얘기해보고 싶은 부분
+- areas where clarity is needed or aspects you'd like to discuss further

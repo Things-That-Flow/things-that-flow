@@ -1,11 +1,11 @@
 ---
-name: Bug 이슈
-about: Bug 이슈를 입력해 주세요
-title: ':trollface: 제목'
+name: Bug issue
+about: Please enter the bug issue
+title: '🦄 title'
 labels: ''
 assignees: ''
 ---
 
 ### Description
 
-설명을 입력해 주세요
+please provide a description
