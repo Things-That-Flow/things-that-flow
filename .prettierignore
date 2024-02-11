@@ -3,6 +3,9 @@
 pnpm-lock.yaml
 node_modules
 dist
+.next 
+build
+.github
 
 # Packages
 /packages/tsconfig
