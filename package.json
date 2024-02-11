@@ -49,8 +49,8 @@
     "@types/node": "^20.11.16",
     "husky": "^9.0.10",
     "pnpm": "^8.15.1",
-    "@ttflow/tsconfig": "^1.0.0",
-    "@ttflow/eslint-config-custom": "^1.0.0",
+    "@ttflow/tsconfig": "workspace:*",
+    "@ttflow/eslint-config-custom": "workspace:*",
     "typescript": "^5.2.2"
   },
   "lint-staged": {
