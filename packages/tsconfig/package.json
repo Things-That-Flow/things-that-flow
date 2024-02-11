@@ -1,5 +1,5 @@
 {
-  "name": "ttflow-tsconfig",
+  "name": "@ttflow/tsconfig",
   "version": "1.0.0",
   "main": ".",
   "private": true

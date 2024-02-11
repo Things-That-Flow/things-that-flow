@@ -1,0 +1,16 @@
+{
+  "name": "@ttflow/eslint-config-custom",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.cjs",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}
