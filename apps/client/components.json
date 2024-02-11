@@ -12,6 +12,6 @@
   },
   "aliases": {
     "components": "@/libs/shared/design-system",
-    "utils": "@/libs/shared/design-system"
+    "utils": "@/libs/shared/design-system/utils"
   }
 }
