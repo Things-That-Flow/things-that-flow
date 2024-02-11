@@ -46,11 +46,11 @@
   },
   "packageManager": "pnpm@8.15.1",
   "devDependencies": {
+    "@ttflow/eslint-config-custom": "workspace:*",
+    "@ttflow/tsconfig": "workspace:*",
     "@types/node": "^20.11.16",
     "husky": "^9.0.10",
     "pnpm": "^8.15.1",
-    "@ttflow/tsconfig": "workspace:*",
-    "@ttflow/eslint-config-custom": "workspace:*",
     "typescript": "^5.2.2"
   },
   "lint-staged": {
