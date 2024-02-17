@@ -12,7 +12,11 @@ const Page = () => {
       }}
     >
       <Circle
-        circleColor={{
+        size={{
+          width: 480,
+          height: 480
+        }}
+        color={{
           r: 142,
           g: 122,
           b: 181,

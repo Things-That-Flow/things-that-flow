@@ -11,7 +11,11 @@ interface ProgramInfo {
 }
 
 interface Props {
-  circleColor: {
+  size: {
+    width: number
+    height: number
+  }
+  color: {
     r: number
     g: number
     b: number
@@ -19,7 +23,7 @@ interface Props {
   }
 }
 
-const Circle = ({ circleColor }: Props) => {
+const Circle = ({ size, color }: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -128,19 +132,13 @@ const Circle = ({ circleColor }: Props) => {
     gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition)
 
     if (programInfo.uniformLocations.color) {
-      gl.uniform4f(
-        programInfo.uniformLocations.color,
-        circleColor.r / 255,
-        circleColor.g / 255,
-        circleColor.b / 255,
-        circleColor.a / 1.0
-      )
+      gl.uniform4f(programInfo.uniformLocations.color, color.r / 255, color.g / 255, color.b / 255, color.a / 1.0)
     }
 
     gl.drawArrays(gl.TRIANGLE_FAN, 0, numSegments)
   }
 
-  return <canvas ref={canvasRef} width="480" height="480"></canvas>
+  return <canvas ref={canvasRef} width={size.width} height={size.height} />
 }
 
 export default Circle
