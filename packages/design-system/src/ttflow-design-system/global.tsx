@@ -71,8 +71,6 @@ const styles = css`
   }
 `
 
-const GlobalStyle = () => {
+export const GlobalStyle = () => {
   return <Global styles={styles} />
 }
-
-export default GlobalStyle
