@@ -1,6 +1,8 @@
 import { css, Global } from '@emotion/react'
+import normalize from 'emotion-normalize'
 
 const styles = css`
+  ${normalize}
   /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
   blockquote,
   body,
