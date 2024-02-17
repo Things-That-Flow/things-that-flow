@@ -33,6 +33,7 @@
     "preinstall": "pnpm dlx only-allow pnpm",
     "prepare": "husky install",
     "lint": "pnpx eslint .",
+    "lint:fix": "pnpx lint --fix",
     "format": "pnpx prettier --write \"**/*.{ts,tsx,md}\"",
     "install-all": "pnpm install && pnpm --filter @ttflow/client install && pnpm --filter @ttflow/tsconfig install && pnpm --filter @ttflow/eslint-config-custom install",
     "uninstall-all": "find . -name 'node_modules' -exec rm -rf '{}' + ",
