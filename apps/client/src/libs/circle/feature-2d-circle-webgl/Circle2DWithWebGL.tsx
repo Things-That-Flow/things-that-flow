@@ -23,7 +23,7 @@ interface Props {
   }
 }
 
-const Circle = ({ size, color }: Props) => {
+const Circle2DWithWebGL = ({ size, color }: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -141,4 +141,4 @@ const Circle = ({ size, color }: Props) => {
   return <canvas ref={canvasRef} width={size.width} height={size.height} />
 }
 
-export default Circle
+export default Circle2DWithWebGL

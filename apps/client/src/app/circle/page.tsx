@@ -1,4 +1,4 @@
-import Circle from '@/libs/circle/feature-circle/Circle'
+import Circle2DWithWebGL from '@/libs/circle/feature-2d-circle-webgl/Circle2DWithWebGL'
 
 const Page = () => {
   return (
@@ -11,7 +11,7 @@ const Page = () => {
         flexDirection: 'column'
       }}
     >
-      <Circle
+      <Circle2DWithWebGL
         size={{
           width: 480,
           height: 480
