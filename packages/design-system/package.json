@@ -13,14 +13,15 @@
     }
   },
   "scripts": {
-    "dev:playground": "vite",
+    "dev:playground": "vite --port 3002 --strictPort",
     "build:with-vite": "tsc && vite build",
     "build:postcss": "postcss src/sample/globals.css -o dist/sample/styles.css",
     "build:with-tsup": "tsup src/index.tsx --format cjs,esm --dts",
     "build:with-tsup:notcjs": "tsup src/index.ts --format esm --dts",
     "build:tsup-with-css": "pnpm run build:postcss && pnpm run build:with-tsup",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3002 --strictPort",
+    "serve": "vite serve --port 3002 --strictPort"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
