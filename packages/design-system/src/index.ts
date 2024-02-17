@@ -1,1 +1,1 @@
-export * from './sample/ui/button'
+export * from './ttflow-design-system/global'

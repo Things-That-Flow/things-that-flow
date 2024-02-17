@@ -1,5 +1,5 @@
 const Playground = () => {
-  return <div></div>
+  return <div>things that flow design system playground!!</div>
 }
 
 export default Playground

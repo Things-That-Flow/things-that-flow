@@ -42,6 +42,7 @@
     "tsconfig": "pnpm --filter @ttflow/tsconfig",
     "eslint-custom": "pnpm --filter @ttflow/eslint-config-custom install",
     "tds": "pnpm --filter @ttflow/design-system",
+    "tds:build-with-tsup": "pnpm tds build:with-tsup",
     "dev:client:afterupdate": "pnpm batch-update && pnpm client run dev",
     "dev:client": "pnpm client run dev",
     "config:pre-commit": "chmod +x .husky/pre-commit && pnpm batch-update && pnpx prettier --write . && pnpm lint"
