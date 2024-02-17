@@ -1,20 +1,25 @@
-import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 
-import HomePage from './page'
+import { GlobalStyle } from '@ttflow/design-system'
 
-import '@/styles/globals.css'
+import CirclePage from './circle/page'
+import HomePage from './page'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />
+  },
+  {
+    path: '/circle',
+    element: <CirclePage />
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <>
+    <GlobalStyle />
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </>
 )
