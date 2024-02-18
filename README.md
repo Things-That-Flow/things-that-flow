@@ -18,6 +18,10 @@ Install VSCode Extension
 
 ```bash
 git clone https://github.com/Things-That-Flow/things-that-flow.git
-pnpm dev:client:afterupdate # run client after updating module
-pnpm tds:build-with-tsup # build ttflow design system
+
+# Run graphics after updating module
+pnpm dev:graphics:afterupdate
+
+# Build ttflow design system
+pnpm tds:build-with-tsup
 ```
