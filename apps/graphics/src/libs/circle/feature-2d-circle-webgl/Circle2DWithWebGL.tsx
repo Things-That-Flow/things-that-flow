@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 
+import { ColorOfCircleType, SizeOfCircleType } from '../types'
+
 interface ProgramInfo {
   program: WebGLProgram
   attribLocations: {
@@ -11,16 +13,8 @@ interface ProgramInfo {
 }
 
 interface Props {
-  size: {
-    width: number
-    height: number
-  }
-  color: {
-    r: number
-    g: number
-    b: number
-    a: number
-  }
+  size: Record<SizeOfCircleType, number>
+  color: Record<ColorOfCircleType, number>
 }
 
 const Circle2DWithWebGL = ({ size, color }: Props) => {
