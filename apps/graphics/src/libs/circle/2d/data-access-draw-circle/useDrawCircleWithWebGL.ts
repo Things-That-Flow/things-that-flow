@@ -65,7 +65,7 @@ const useDrawCircleWithWebGL = ({ color }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return canvasRef
+  return { ref: canvasRef }
 }
 
 export default useDrawCircleWithWebGL

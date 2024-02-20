@@ -7,11 +7,11 @@ interface Props {
 }
 
 const Circle2DWithWebGL = ({ size, color }: Props) => {
-  const canvasRef = useDrawCircleWithWebGL({
+  const { ref } = useDrawCircleWithWebGL({
     color
   })
 
-  return <canvas ref={canvasRef} width={size.width} height={size.height} />
+  return <canvas ref={ref} {...size} />
 }
 
 export default Circle2DWithWebGL
