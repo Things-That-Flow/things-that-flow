@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 
 import { ColorOfCircleType, ProgramInfo, SizeOfCircleType } from '../types'
-import { drawCircle } from '../utils/circle'
-import { initShaderProgram } from '../utils/init'
+import { drawCircle } from '../utils/drawCircle'
+import { initShaderProgram } from '../utils/initShaderProgram'
 
 interface Props {
   size: Record<SizeOfCircleType, number>

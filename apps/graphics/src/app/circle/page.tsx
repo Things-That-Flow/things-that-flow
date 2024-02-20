@@ -1,4 +1,4 @@
-import Circle2DWithWebGL from '@/libs/circle/feature-2d-circle-webgl/Circle2DWithWebGL'
+import Circle2DWithWebGL from '@/libs/circle/2d/feature-circle-webgl/Circle2DWithWebGL'
 
 const Page = () => {
   return (
