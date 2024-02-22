@@ -1,5 +1,5 @@
-import useDrawCircleWithWebGL from '../data-access-draw-circle/useDrawCircleWithWebGL'
-import { ColorOfCircleType, SizeOfCircleType } from '../types'
+import useDrawCircleWithWebGL from '../data-access-draw-simple-circle/useDrawCircleWithWebGL'
+import { ColorOfCircleType, SizeOfCircleType } from '../types/simple-circle'
 
 interface Props {
   size: Record<SizeOfCircleType, number>

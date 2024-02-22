@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 
-import { ColorOfCircleType, ProgramInfo } from '../types'
-import { drawCircle } from '../utils/drawCircle'
-import { initShaderProgram } from '../utils/initShaderProgram'
+import { ColorOfCircleType, ProgramInfo } from '../types/simple-circle'
+import { drawCircle } from '../util-draw-simple-circle/drawCircle'
+import { initShaderProgram } from '../util-draw-simple-circle/initShaderProgram'
 
 interface Props {
   color: Record<ColorOfCircleType, number>
