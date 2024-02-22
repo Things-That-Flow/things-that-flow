@@ -3,7 +3,7 @@ import Circle2DWithWebGL from '@/libs/circle/2d/feature-circle-webgl/Circle2DWit
 const Page = () => {
   return (
     <div
-      style={{
+      css={{
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
@@ -24,7 +24,7 @@ const Page = () => {
         }}
       />
       <p
-        style={{
+        css={{
           position: 'absolute',
           color: 'white',
           fontSize: '13px'
