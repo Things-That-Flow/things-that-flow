@@ -1,4 +1,4 @@
-import { ColorOfCircleType, ProgramInfo } from '../types'
+import { ColorOfCircleType, ProgramInfo } from '../types/simple-circle'
 
 export const drawCircle = (
   gl: WebGLRenderingContext,
