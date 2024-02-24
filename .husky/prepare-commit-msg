@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Please enter the commit message. In a ttflow project, the type and scope of the commit message must follow the rules below."
+echo "Type enum is 'build' | 'chore' | 'ci' | 'docs' | 'feat' | 'fix' | 'refactor' | 'revert' |'style' | 'test'"
+echo "Scope enum is 'ttflow'"
