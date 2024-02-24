@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 
 import { GlobalStyle } from '@ttflow/design-system'
 
-import CirclePage from './circle/page'
 import HomePage from './page'
+import PrimitivesPage from './primitives/page'
 
 const router = createBrowserRouter([
   {
@@ -12,8 +12,8 @@ const router = createBrowserRouter([
     element: <HomePage />
   },
   {
-    path: '/circle',
-    element: <CirclePage />
+    path: '/primitives',
+    element: <PrimitivesPage />
   }
 ])
 

@@ -1,10 +1,7 @@
-import { ColorOfCircleType, ProgramInfo } from '../types/simple-circle'
+import { ColorProp } from '@/libs/shared/types/color'
+import { Program } from '@/libs/shared/types/program'
 
-export const drawCircle = (
-  gl: WebGLRenderingContext,
-  programInfo: ProgramInfo,
-  color: Record<ColorOfCircleType, number>
-) => {
+export const drawCircle = (gl: WebGLRenderingContext, programObject: Program, color: ColorProp) => {
   // 여기서 buffer는 원의 정점 데이터를 저장하는 목적이다.
   const positionBuffer = gl.createBuffer() // 새로운 buffer를 생성한다.
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer) // 생성한 buffer를 현재 배열 buffer로 바인딩 처리한다.
@@ -27,16 +24,16 @@ export const drawCircle = (
   // bufferData를 사용해서 현재 바인딩된 버퍼에 정점 데이터를 저장한다.
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW)
 
-  gl.useProgram(programInfo.program) // shader 프로그램을 사용한다.
+  gl.useProgram(programObject.program) // shader 프로그램을 사용한다.
 
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer) // 현재 버퍼에 정점 위치의 buffer를 바인딩한다.
-  gl.vertexAttribPointer(programInfo.attribLocations.vertexPosition, 3, gl.FLOAT, false, 0, 0) // shader의 정점 위치 속성(attribute)에 버퍼 데이터 연결
-  gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition) // 해당 속성 활성화
+  gl.vertexAttribPointer(programObject.attribLocations.vertexPosition, 3, gl.FLOAT, false, 0, 0) // shader의 정점 위치 속성(attribute)에 버퍼 데이터 연결
+  gl.enableVertexAttribArray(programObject.attribLocations.vertexPosition) // 해당 속성 활성화
 
-  if (programInfo.uniformLocations.color) {
+  if (programObject.uniformLocations.color) {
     // 색상 존재하면, shader 프로그램의 색상 uniform에 원의 색상을 설정한다.
     // 색상 값은 [0, 1] 범위로 정규화해서 전달한다.
-    gl.uniform4f(programInfo.uniformLocations.color, color.r / 255, color.g / 255, color.b / 255, color.a / 1.0)
+    gl.uniform4f(programObject.uniformLocations.color, color.r / 255, color.g / 255, color.b / 255, color.a / 1.0)
   }
 
   // 원을 그린다.

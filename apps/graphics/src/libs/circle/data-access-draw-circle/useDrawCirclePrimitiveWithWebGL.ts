@@ -1,14 +1,14 @@
 import { useEffect, useRef } from 'react'
 
-import { ColorOfCircleType, ProgramInfo } from '../types/simple-circle'
-import { drawCircle } from '../util-draw-simple-circle/drawCircle'
-import { initShaderProgram } from '../util-draw-simple-circle/initShaderProgram'
+import { ColorPropsWithOthers } from '@/libs/shared/types/color'
+import { Program } from '@/libs/shared/types/program'
 
-interface Props {
-  color: Record<ColorOfCircleType, number>
-}
+import { drawCircle } from '../util-draw-circle'
+import { initShaderProgram } from '../util-init-program'
 
-const useDrawCircleWithWebGL = ({ color }: Props) => {
+type Props = unknown
+
+const useDrawCirclePrimitiveWithWebGL = ({ color }: ColorPropsWithOthers<Props>) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const useDrawCircleWithWebGL = ({ color }: Props) => {
     if (!shaderProgram) return
 
     // shader 프로그램 정보를 정의한다.
-    const programInfo: ProgramInfo = {
+    const programObject: Program = {
       program: shaderProgram,
       // 위에서 shader source code를 통해 할당한 변수들(aVertexPosition, uColor)을 지정한다.
       attribLocations: {
@@ -61,11 +61,11 @@ const useDrawCircleWithWebGL = ({ color }: Props) => {
       }
     }
 
-    drawCircle(gl, programInfo, color) // webgl을 사용해 2d 원을 그리는 함수를 실행한다.
+    drawCircle(gl, programObject, color) // webgl을 사용해 2d 원을 그리는 함수를 실행한다.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return { ref: canvasRef }
 }
 
-export default useDrawCircleWithWebGL
+export default useDrawCirclePrimitiveWithWebGL

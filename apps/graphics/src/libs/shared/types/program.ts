@@ -1,8 +1,4 @@
-export type SizeOfCircleType = 'width' | 'height'
-
-export type ColorOfCircleType = 'r' | 'g' | 'b' | 'a'
-
-export interface ProgramInfo {
+export type Program = {
   program: WebGLProgram
   attribLocations: {
     vertexPosition: number
