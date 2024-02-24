@@ -2,8 +2,8 @@
 
 > Folder structure and naming convention for ttflow
 
-일반적인 규칙은 ESLint, TypeScript, Prettier, 그리고 Husky로 강제된다.<br>
-그 외에 특정 디자인 패턴과 아키텍쳐, 네이밍 규칙 등은 아래에서 서술한 내용을 따른다.
+General conventions are enforced by ESLint, TypeScript, Prettier, and Husky.<br>
+Other specific design patterns, architectures, naming conventions, etc. follow the conventions described below.
 
 ## Code Collocation
 
@@ -14,7 +14,7 @@
 
 ## Project Structure
 
-프로젝트 전체 구조는 다음과 같다. pnpm workspace를 사용해 모노레포로 관리한다.<br>
+The overall structure of the project is as follows Managed as a monorepo using pnpm workspace.<br>
 
 ```shell
 apps/
@@ -59,7 +59,7 @@ packages/
 - `src/libs` folder serves to organize the domains: there are individual folders for each specific domain name, and each domain folder uses the four library types (data-access, feature, util, ui) as a convention. Code shared by multiple domains is located in the shared folder.
 - `packages` folder manages code that is shared by multiple apps.
 
-app은 기본적으로 `vite`를 사용하며, package는 `tsup`을 사용한다.
+`app` uses `vite` by default, and `package` uses `tsup`.
 
 ## Data immutability
 
@@ -142,20 +142,19 @@ Additionally, in a graphics application, each React component must specify its m
 
 ## State Management
 
-Prop drilling 자체를 병적으로 경계할 필요는 없다.<br>
-서버 상태는 React Query를 사용해 관리하며, 복잡해지는 ui 상태는 전역 상태 도구를 사용한다. (단, 전역 상태 관리를 남발하지 않는다.)
+Prop drilling is not bounded.<br>
+Server state is managed using React Query, and complex UI state is managed using global state tools. (However, do not abuse global state management).
 
-Component Composition, Compound Component 등 다양한 디자인 패턴을 활용해 코드를 작성한다.
+Write code utilizing various design patterns such as Component Composition and Compound Component.
 
 ## Design System
 
-샘플 컴포넌트로 shadcn/ui를 참고한다.<br>
-emotion을 기본 css 도구로 사용하며, 샘플 컴포넌트를 기반으로 필요할 때마다 디자인 시스템을 구축한다.
+See the sample component based on `shadcn/ui` that we wrote in the Design System package.<br>
+Use emotion as our primary CSS tool, and build our design system as needed based on sample components.
 
 ## Merge strategy and branching
 
-Squash Merge를 기반으로 병합한다.<br>
-Issue를 발행하고, 해당 Issue를 브랜치명에 반영한다.ㄴ
+Merge based on Squash Merge. Publish an issue and reflect it in the branch name.
 
 ## Tests
 
