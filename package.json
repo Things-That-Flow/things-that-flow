@@ -46,10 +46,15 @@
     "dev:graphics:afterupdate": "pnpm batch-update && pnpm graphics run dev",
     "dev:graphics:after-tds-update": "pnpm tds:build-with-tsup && pnpm batch-update && pnpm graphics run dev",
     "dev:graphics": "pnpm graphics run dev",
-    "config:pre-commit": "chmod +x .husky/pre-commit && pnpm batch-update && pnpx prettier --write . && pnpm lint"
+    "config:pre-commit": "chmod +x .husky/pre-commit",
+    "config:commit-msg": "chmod +x .husky/commit-msg",
+    "config:prepare-commit-msg": "chmod +x .husky/prepare-commit-msg",
+    "config:husky": "pnpm config:pre-commit && pnpm config:commit-msg && pnpm config:prepare-commit-msg && pnpm batch-update && pnpx prettier --write . && pnpm lint"
   },
   "packageManager": "pnpm@8.15.1",
   "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
     "@ttflow/eslint-config-custom": "workspace:*",
     "@ttflow/tsconfig": "workspace:*",
     "@types/node": "^20.11.16",
@@ -71,8 +76,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
+      "prettier --cache --write",
+      "eslint --cache --fix"
     ]
   }
 }
