@@ -1,7 +1,7 @@
 import { row } from '@/libs/shared/styles/layout/center'
-import CircleWithWebGL from '@/libs/primitives/feature-triangle/CircleWithWebGL'
-import RectWithWebGL from '@/libs/primitives/feature-triangle/RectWithWebGL'
-import TriangleWithWebGL from '@/libs/primitives/feature-triangle/TriangleWithWebGL'
+import CircleWithWebGL from '@/libs/primitives/feature-primitive/CircleWithWebGL'
+import RectWithWebGL from '@/libs/primitives/feature-primitive/RectWithWebGL'
+import TriangleWithWebGL from '@/libs/primitives/feature-primitive/TriangleWithWebGL'
 
 const Page = () => {
   const COLOR_TEMPLATE = {
