@@ -1,5 +1,6 @@
 import { layoutStyle } from '@/libs/shared/styles/layout/center'
 import CirclePrimitiveWithWebGL from '@/libs/circle/feature-simple-circle-primitive/CirclePrimitiveWithWebGL'
+import TriangleWithWebGL from '@/libs/primitives/feature-triangle/TriangleWithWebGL'
 import RectPrimitiveWithWebGL from '@/libs/rect/feature-simple-rect-primitive/RectPrimitiveWithWebGL'
 
 const Page = () => {
@@ -32,6 +33,18 @@ const Page = () => {
       </div>
       <div css={layoutStyle.layout}>
         <RectPrimitiveWithWebGL {...COLOR_TEMPLATE} size={{ width: 240, height: 240 }} />
+        <p
+          css={{
+            position: 'absolute',
+            color: 'white',
+            fontSize: '13px'
+          }}
+        >
+          Welcome, Things That Flow World!!
+        </p>
+      </div>
+      <div css={layoutStyle.layout}>
+        <TriangleWithWebGL {...COLOR_TEMPLATE} size={{ width: 240, height: 240 }} />
         <p
           css={{
             position: 'absolute',
