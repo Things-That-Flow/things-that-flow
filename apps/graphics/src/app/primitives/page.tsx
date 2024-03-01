@@ -1,7 +1,7 @@
-import { layoutStyle } from '@/libs/shared/styles/layout/center'
-import CirclePrimitiveWithWebGL from '@/libs/circle/feature-simple-circle-primitive/CirclePrimitiveWithWebGL'
+import { row } from '@/libs/shared/styles/layout/center'
+import CircleWithWebGL from '@/libs/primitives/feature-triangle/CircleWithWebGL'
+import RectWithWebGL from '@/libs/primitives/feature-triangle/RectWithWebGL'
 import TriangleWithWebGL from '@/libs/primitives/feature-triangle/TriangleWithWebGL'
-import RectPrimitiveWithWebGL from '@/libs/rect/feature-simple-rect-primitive/RectPrimitiveWithWebGL'
 
 const Page = () => {
   const COLOR_TEMPLATE = {
@@ -18,9 +18,9 @@ const Page = () => {
   }
 
   return (
-    <div css={layoutStyle.layout}>
-      <div css={layoutStyle.layout}>
-        <CirclePrimitiveWithWebGL {...COLOR_TEMPLATE} />
+    <div css={row.layout}>
+      <div css={row.layout}>
+        <CircleWithWebGL {...COLOR_TEMPLATE} />
         <p
           css={{
             position: 'absolute',
@@ -31,8 +31,8 @@ const Page = () => {
           Welcome, Things That Flow World!!
         </p>
       </div>
-      <div css={layoutStyle.layout}>
-        <RectPrimitiveWithWebGL {...COLOR_TEMPLATE} size={{ width: 240, height: 240 }} />
+      <div css={row.layout}>
+        <RectWithWebGL {...COLOR_TEMPLATE} size={{ width: 240, height: 240 }} />
         <p
           css={{
             position: 'absolute',
@@ -43,7 +43,7 @@ const Page = () => {
           Welcome, Things That Flow World!!
         </p>
       </div>
-      <div css={layoutStyle.layout}>
+      <div css={row.layout}>
         <TriangleWithWebGL {...COLOR_TEMPLATE} size={{ width: 240, height: 240 }} />
         <p
           css={{

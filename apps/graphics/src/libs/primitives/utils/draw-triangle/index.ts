@@ -1,7 +1,7 @@
-import { ColorType } from '../types/color'
-import { Buffers, Program } from '../types/program'
+import { ColorType } from '../../types/color'
+import { Buffers, Program } from '../../types/program'
 
-export const drawTriangle = (gl: WebGLRenderingContext, programObject: Program, buffers: Buffers, color: ColorType) => {
+const drawTriangle = (gl: WebGLRenderingContext, programObject: Program, buffers: Buffers, color: ColorType) => {
   gl.clearColor(0, 0, 0, 0) // Clear to transparent, fully opaque
   gl.clearDepth(1.0) // Clear everything
   gl.enable(gl.DEPTH_TEST) // Enable depth testing
@@ -39,3 +39,5 @@ export const drawTriangle = (gl: WebGLRenderingContext, programObject: Program, 
     gl.drawArrays(gl.TRIANGLES, offset, vertexCount)
   }
 }
+
+export default drawTriangle

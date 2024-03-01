@@ -1,10 +1,11 @@
 import { css } from '@emotion/react'
 
-export const layoutStyle = {
+export const row = {
   layout: css({
     position: 'relative',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    gap: '16px'
   })
 }

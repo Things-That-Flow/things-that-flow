@@ -1,12 +1,11 @@
-import { ColorPropsWithOthers } from '@/libs/shared/types/color'
-
-import GLCommander from '../util-gl-commander'
+import { ColorParamWithOthers } from '../../types/color'
+import GLCommander from '../commander'
 
 type Params = {
   canvas: HTMLCanvasElement
 }
 
-export default ({ canvas, color }: ColorPropsWithOthers<Params>) => {
+const initContext = ({ canvas, color }: ColorParamWithOthers<Params>) => {
   if (!canvas) {
     return
   }
@@ -20,3 +19,5 @@ export default ({ canvas, color }: ColorPropsWithOthers<Params>) => {
   const GLC = new GLCommander(gl)
   GLC.clear(color)
 }
+
+export default initContext

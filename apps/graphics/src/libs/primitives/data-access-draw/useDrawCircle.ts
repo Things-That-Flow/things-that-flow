@@ -1,14 +1,13 @@
 import { useEffect, useRef } from 'react'
 
-import { ColorPropsWithOthers } from '@/libs/shared/types/color'
-import { Program } from '@/libs/shared/types/program'
-
-import { drawCircle } from '../util-draw-circle'
-import { initShaderProgram } from '../util-init-program'
+import { ColorParamWithOthers } from '../types/color'
+import { Program } from '../types/program'
+import drawCircle from '../utils/draw-circle'
+import { initShaderProgram } from '../utils/init-program'
 
 type Props = unknown
 
-const useDrawCirclePrimitiveWithWebGL = ({ color }: ColorPropsWithOthers<Props>) => {
+const useDrawCircle = ({ color }: ColorParamWithOthers<Props>) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -68,4 +67,4 @@ const useDrawCirclePrimitiveWithWebGL = ({ color }: ColorPropsWithOthers<Props>)
   return { ref: canvasRef }
 }
 
-export default useDrawCirclePrimitiveWithWebGL
+export default useDrawCircle

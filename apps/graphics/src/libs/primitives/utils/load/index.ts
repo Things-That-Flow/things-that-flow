@@ -5,7 +5,7 @@ type ShaderLoaderType = WebGLRenderingContext['VERTEX_SHADER'] | WebGLRenderingC
 // compiles it.
 // gl context(gl)와 shader 타입(type), shader 소스 코드(source)를 전달받아 => 컴파일된 WebGLShader 객체 생성
 // shader 타입은 vertext shader 또는 fragment shader
-export const loadShader = (gl: WebGLRenderingContext, type: ShaderLoaderType, source: string): WebGLShader | null => {
+const loadShader = (gl: WebGLRenderingContext, type: ShaderLoaderType, source: string): WebGLShader | null => {
   const shader = gl.createShader(type) // shader 객체 생성
   // Only proceed if the shader program was successfully created.
   if (!shader) {
@@ -25,3 +25,5 @@ export const loadShader = (gl: WebGLRenderingContext, type: ShaderLoaderType, so
 
   return shader // 컴파일 성공한 shader 객체를 반환
 }
+
+export default loadShader

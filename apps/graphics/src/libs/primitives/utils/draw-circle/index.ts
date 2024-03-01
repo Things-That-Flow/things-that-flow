@@ -1,7 +1,7 @@
-import { ColorProp } from '@/libs/shared/types/color'
-import { Program } from '@/libs/shared/types/program'
+import { ColorType } from '../../types/color'
+import { Program } from '../../types/program'
 
-export const drawCircle = (gl: WebGLRenderingContext, programObject: Program, color: ColorProp) => {
+const drawCircle = (gl: WebGLRenderingContext, programObject: Program, color: ColorType) => {
   // 여기서 buffer는 원의 정점 데이터를 저장하는 목적이다.
   const positionBuffer = gl.createBuffer() // 새로운 buffer를 생성한다.
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer) // 생성한 buffer를 현재 배열 buffer로 바인딩 처리한다.
@@ -40,3 +40,5 @@ export const drawCircle = (gl: WebGLRenderingContext, programObject: Program, co
   // gl.TRIANGLE_FAN 모드를 사용해서 원의 정점들을 연결한다.
   gl.drawArrays(gl.TRIANGLE_FAN, 0, numSegments)
 }
+
+export default drawCircle

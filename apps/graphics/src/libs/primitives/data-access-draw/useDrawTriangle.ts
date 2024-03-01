@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react'
 
 import { ColorParamWithOthers } from '../types/color'
 import { Buffers, Program } from '../types/program'
-import { drawTriangle } from '../utils/draw'
-import { initBuffers, initShaderProgram } from '../utils/init'
+import drawTriangle from '../utils/draw-triangle'
+import initBuffers from '../utils/init-buffers'
+import { initShaderProgram } from '../utils/init-program'
 
 type Params = unknown
 

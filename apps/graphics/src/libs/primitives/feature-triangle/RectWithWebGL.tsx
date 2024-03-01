@@ -1,13 +1,12 @@
 import { useEffect, useRef } from 'react'
 
-import { ColorPropsWithOthers } from '@/libs/shared/types/color'
-import { SizeProp } from '@/libs/shared/types/size'
-
-import init from '../util-init'
+import { ColorParamWithOthers } from '../types/color'
+import { SizeProp } from '../types/size'
+import initContext from '../utils/init-context'
 
 type Props = SizeProp
 
-const RectPrimitiveWithWebGL = ({ color, size }: ColorPropsWithOthers<Props>) => {
+const RectWithWebGL = ({ color, size }: ColorParamWithOthers<Props>) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -15,7 +14,7 @@ const RectPrimitiveWithWebGL = ({ color, size }: ColorPropsWithOthers<Props>) =>
       return
     }
 
-    init({
+    initContext({
       canvas: canvasRef.current,
       color
     })
@@ -24,4 +23,4 @@ const RectPrimitiveWithWebGL = ({ color, size }: ColorPropsWithOthers<Props>) =>
   return <canvas ref={canvasRef} width={size.width} height={size.height} />
 }
 
-export default RectPrimitiveWithWebGL
+export default RectWithWebGL
