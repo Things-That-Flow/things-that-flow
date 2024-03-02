@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import Canvas from '../CanvasWithDPR'
+import Canvas2D from '../../Canvas2D'
 
-const StartAndStopDrawCanvasExample = () => {
+const SynCanvasDPR = () => {
   const [isAnimating, setIsAnimating] = useState(false)
 
   const startAnimation = () => setIsAnimating(true)
@@ -22,11 +22,11 @@ const StartAndStopDrawCanvasExample = () => {
 
   return (
     <div>
-      <Canvas draw={draw} animate={animate} width={600} height={400} />
+      <Canvas2D draw={draw} animate={animate} width={600} height={400} />
       <button onClick={startAnimation}>Start Animation</button>
       <button onClick={stopAnimation}>Stop Animation</button>
     </div>
   )
 }
 
-export default StartAndStopDrawCanvasExample
+export default SynCanvasDPR

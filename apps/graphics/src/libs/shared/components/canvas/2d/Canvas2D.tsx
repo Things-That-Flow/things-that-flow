@@ -7,7 +7,7 @@ interface Props {
   height?: number
 }
 
-const Canvas = forwardRef<HTMLCanvasElement, Props>(
+const Canvas2D = forwardRef<HTMLCanvasElement, Props>(
   ({ draw, animate, width = window.innerWidth, height = window.innerHeight }, ref) => {
     const internalRef = useRef<HTMLCanvasElement>(null)
     const canvasRef = (ref !== null ? ref : internalRef) as React.MutableRefObject<HTMLCanvasElement>
@@ -69,4 +69,4 @@ const Canvas = forwardRef<HTMLCanvasElement, Props>(
   }
 )
 
-export default Canvas
+export default Canvas2D
