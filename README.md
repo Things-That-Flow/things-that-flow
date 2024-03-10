@@ -12,6 +12,8 @@ Install VSCode Extension
 
 - ESLint, Prettier
 
+Read [Conventions](./README_CONVENTIONS.md)
+
 ## Get Started
 
 ```bash
